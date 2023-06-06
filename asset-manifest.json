@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Phigros_results/static/css/main.af379db8.css",
+    "main.js": "/Phigros_results/static/js/main.87942921.js",
+    "static/js/787.43f7437d.chunk.js": "/Phigros_results/static/js/787.43f7437d.chunk.js",
+    "index.html": "/Phigros_results/index.html",
+    "main.af379db8.css.map": "/Phigros_results/static/css/main.af379db8.css.map",
+    "main.87942921.js.map": "/Phigros_results/static/js/main.87942921.js.map",
+    "787.43f7437d.chunk.js.map": "/Phigros_results/static/js/787.43f7437d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af379db8.css",
+    "static/js/main.87942921.js"
+  ]
+}
