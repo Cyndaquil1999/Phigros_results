@@ -56,6 +56,24 @@ app.listen(port, () => {
   console.log(`listening on *:${port}`);
 })
 
+app.get('/results', (req, res) => {
+  sql_results = `SELECT DISTINCT 
+  music_results.name AS name, music_diff.composer AS composer, 
+  FORMAT(Easy*100,2) AS "EZ", FORMAT(Hard*100,2) AS "HD", 
+  FORMAT(Insane*100,2) AS "IN", FORMAT(Another*100,2) AS "AT", 
+  FORMAT(Legacy*100,2) AS "Legacy" FROM music_results 
+  JOIN music_diff ON music_results.name = music_diff.name ORDER BY name;
+  `
+  connection.query(sql_results,
+    function (err, results) {
+      if (err) {
+        console.log("データベースからの読み込みでエラーが発生しました");
+        throw err;
+      }
+      res.json({results: results});
+    })
+})
+
 
 app.post('/scores', (req, res) => {
   console.log(req.body)
