@@ -102,12 +102,6 @@ function Calculation() {
         </Table>
       </TableContainer>
 
-      <Typography variant="h3">レート計算は以下の手順で行います。</Typography>
-      <ol>
-        <li>Ranking Scoreの高い方から19譜面のRanking Scoreを合計します。</li>
-        <li>次に理論値譜面の中で最大の譜面定数を足します。</li>
-        <li>最後にこれまでの合計値を20で割ります。これがレートとして与えられます。</li>
-      </ol>
     </Container>
   );
 }
