@@ -6,9 +6,11 @@ export default function Page() {
   return (
     <div>
       <Header />
-      <div className="flex flex-col justify-center items-center mb-10">
-        <div className="text-xl mb-4">このツールでは以下の機能があります。</div>
-        <div className="flex flex-col space-y-2 text-lg">
+      <div className="flex flex-col justify-center items-center my-10">
+        <div className="text-5xl mb-4">
+          このツールでは以下の機能があります。
+        </div>
+        <div className="flex flex-col space-y-2 text-2xl">
           <div className="flex">
             <span>1.</span>
             <span> Phigrosのレート計算</span>
@@ -24,6 +26,7 @@ export default function Page() {
         </div>
       </div>
 
+      {/* TODO: サイズと色のスタイル調整 */}
       <div className="flex flex-col justify-center items-center space-y-4">
         <Button className="w-32 sm:w-40 md:w-48 lg:w-56">
           <Link href="/signin">ログイン</Link>

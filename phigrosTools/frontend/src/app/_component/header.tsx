@@ -10,7 +10,7 @@ export function Header() {
           <Link href="/" className="text-black">ホーム</Link>
         </Button>
         <Button className="bg-yellow-500 hover:bg-yellow-300">
-          <Link href="/rate" className="text-black">レート計算</Link>
+          <Link href="/rating" className="text-black">レート計算</Link>
         </Button>
         <Button className="bg-teal-500 hover:bg-teal-300">
           <Link href="/submitScore" className="text-black">スコア登録</Link>
