@@ -12,7 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "prisma": "^5.14.0"
   },
   "devDependencies": {
     "typescript": "^5.4.5"
