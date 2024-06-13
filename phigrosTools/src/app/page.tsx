@@ -25,12 +25,14 @@ export default function Page() {
       </div>
 
       <div className="flex flex-col justify-center items-center space-y-4">
-        <Button className="w-32 sm:w-40 md:w-48 lg:w-56">
-          <Link href="/signin">ログイン</Link>
-        </Button>
-        <Button className="w-32 sm:w-40 md:w-48 lg:w-56">
-          <Link href="/signup">会員登録</Link>
-        </Button>
+        <Link href="/signin">
+          <Button className="w-32 sm:w-40 md:w-48 lg:w-56">ログイン</Button>
+        </Link>
+        <Link href="/signup">
+          <Button className="w-32 sm:w-40 md:w-48 lg:w-56">
+            アカウント登録
+          </Button>
+        </Link>
       </div>
     </div>
   );
