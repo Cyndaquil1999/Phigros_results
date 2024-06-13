@@ -1,0 +1,48 @@
+datasource db {
+  provider = "postgresql" // または使用するデータベースに応じて変更
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id              String           @id @default(uuid())
+  userId          String           @unique
+  email           String           @unique
+  name            String?
+  image           String? // プロフィール画像など
+  UserMusicScores UserMusicScore[]
+}
+
+model Music {
+  id              Int              @id @default(autoincrement())
+  name            String
+  composer        String
+  difficulty      Difficulty       @relation(fields: [difficultyId], references: [id])
+  difficultyId    Int
+  noteConstant    Float
+  UserMusicScores UserMusicScore[]
+}
+
+model Difficulty {
+  id             Int              @id @default(autoincrement())
+  name           String
+  Musics         Music[]
+  UserMusicScore UserMusicScore[]
+}
+
+model UserMusicScore {
+  id           Int    @id @default(autoincrement())
+  musicId      Int
+  difficultyId Int
+  userId       String
+  accuracy     Float
+
+  music      Music      @relation(fields: [musicId], references: [id])
+  difficulty Difficulty @relation(fields: [difficultyId], references: [id])
+  user       User       @relation(fields: [userId], references: [id])
+
+  @@unique([musicId, difficultyId, userId])
+}
